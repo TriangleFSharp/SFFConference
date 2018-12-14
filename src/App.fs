@@ -6,27 +6,27 @@ open Fable.Helpers.React.Props
 open Fulma
 
 
-type Model = { counter : int }
+type Model = { size : float }
 
 type Msg =
     | Increment
     | Decrement
 
 let init () =
-    { counter = 0 }, Cmd.none
+    { size = 32. }, Cmd.none
 
 let update msg model =
     match msg with
     | Increment -> 
-        { model with counter = model.counter + 1 }, Cmd.Empty
+        { model with size = model.size * 2. }, Cmd.Empty
     | Decrement ->
-        { model with counter = model.counter - 1 }, Cmd.Empty
+        { model with size = model.size / 2. }, Cmd.Empty
 
 
 let private view model dispatch =
     div [ ] [ 
         button [ OnClick (fun _ -> dispatch Increment) ] [ str "+" ]
-        str (string model.counter)
+        img [ Src "just_chicken.svg"; Style [Width model.size;] ]
         button [ OnClick (fun _ -> dispatch Decrement) ] [ str "-" ]
     ]
 
