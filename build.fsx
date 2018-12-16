@@ -43,7 +43,7 @@ Target.create "Watch" (fun _ ->
 )
 
 // Where to push generated documentation
-let githubLink = ""
+let githubLink = "https://github.com/TriangleFSharp/SFFConference.git"
 let publishBranch = "gh-pages"
 let fableRoot   = __SOURCE_DIRECTORY__
 let temp        = fableRoot </> "temp"
@@ -51,7 +51,7 @@ let docsOuput = fableRoot </> "output"
 
 // --------------------------------------------------------------------------------------
 // Release Scripts
-Target.create "PublishDocs" (fun _ ->
+Target.create "Publish" (fun _ ->
     Shell.cleanDir temp
     Repository.cloneSingleBranch "" githubLink publishBranch temp
 
@@ -71,7 +71,7 @@ Target.create "PublishDocs" (fun _ ->
     ==> "Watch"
 
 "Build"
-    ==> "PublishDocs"
+    ==> "Publish"
 
 // start build
 Target.runOrDefault "Build"
