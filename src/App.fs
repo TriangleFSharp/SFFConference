@@ -17,9 +17,7 @@ type Route = Blog of int | Search of string
 
 type Model = { page : Page }
 
-type Msg =
-    | Increment
-
+type Msg = unit
 let urlUpdate loc model =
     match loc with
     | Some l -> { model with page = l}, Cmd.none
@@ -32,19 +30,15 @@ let update msg model =
     model, Cmd.Empty
 
 let private view (model:Model) (dispatch:Dispatch<Msg>) =
-    div [] [ 
-        button [ OnClick (fun _ -> dispatch Increment) ] [ str "+" ]
-        img [ Src "just_chicken.svg"; Style [] ]
-        button [ OnClick (fun _ -> dispatch Increment) ] [ str "-" ]
-    ]
+    match model.page with
+    | Home -> Home.home dispatch
+    | _ -> div [] [str "Nothing here."]
 
 open Elmish.React
 open Elmish.Debug
 open Elmish.Browser.Navigation
 open Elmish.Browser.UrlParser
 open Elmish.HMR
-
-
 let parser =
     oneOf [
         map Home (s "home")
@@ -56,7 +50,6 @@ let parser =
     ]
 
 
-//WOAH TYPE MISMATCH HERE
 Program.mkProgram init update view
 |> Program.toNavigable (parseHash parser) urlUpdate
 #if DEBUG

@@ -3,6 +3,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Home\Home.fs" />
+    <Compile Include="Schedule\Schedule.fs" />
+    <Compile Include="Speakers\Speakers.fs" />
+    <Compile Include="Tickets\Tickets.fs" />
+    <Compile Include="Venue\Venue.fs" />
     <Compile Include="App.fs" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
