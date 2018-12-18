@@ -19,6 +19,7 @@ type Model = { page : Page }
 
 type Msg = unit
 let urlUpdate loc model =
+    printfn "%A" loc
     match loc with
     | Some l -> { model with page = l}, Cmd.none
     | None -> model, Cmd.none
@@ -32,6 +33,7 @@ let update msg model =
 let private view (model:Model) (dispatch:Dispatch<Msg>) =
     match model.page with
     | Home -> Home.home dispatch
+    | Cfp -> Cfp.view 
     | _ -> div [] [str "Nothing here."]
 
 open Elmish.React
