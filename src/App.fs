@@ -4,6 +4,9 @@ open Elmish
 open Fable.Helpers.React
 open Fable.Helpers.React.Props
 open Fulma
+open Fable.Core.JsInterop
+
+importAll "./style.css"
 
 type Page =
     | Home
