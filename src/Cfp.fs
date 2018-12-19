@@ -11,6 +11,6 @@ let view =
             br []
             textarea [Type "text"; Name "message"; Placeholder "Test Message"; Cols 4] []
             br []
-            input [Type "submit"; Value "Send" ]
+            input [Type "submit"; Value "Send"; ClassName "button is-success" ]
         ]
     ]

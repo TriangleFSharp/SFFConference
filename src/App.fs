@@ -6,7 +6,7 @@ open Fable.Helpers.React.Props
 open Fulma
 open Fable.Core.JsInterop
 
-importAll "./style.css"
+importAll "./style.sass"
 
 type Page =
     | Home
