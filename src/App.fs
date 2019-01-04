@@ -6,7 +6,7 @@ open Fable.Helpers.React.Props
 open Fulma
 open Fable.Core.JsInterop
 
-importAll "./style.sass"
+importAll "./style.scss"
 
 type Page =
     | Home
@@ -33,11 +33,38 @@ let init loc =
 let update msg model =
     model, Cmd.Empty
 
-let private view (model:Model) (dispatch:Dispatch<Msg>) =
-    match model.page with
+
+
+let navBar =
+    nav [ Class "navbar is-primary topNav"; Role "navigation" ] [
+        div [ Class "navbar-brand" ] [
+            img [Class "chickenSandwich"; Src "sandwich.png"]
+        ]
+        div [ Class "container" ] [
+            div [ Class "navbar-menu" ] [
+                div [] [
+                      a [ Class "navbar-item"; Href "#home" ] [ str "Home" ]
+                      a [ Class "navbar-item"; Href "#home" ] [ str "Speakers" ]
+                      a [ Class "navbar-item"; Href "#home" ] [ str "Venue" ]
+                      a [ Class "navbar-item"; Href "#home" ] [ str "Schedule" ]
+                      a [ Class "navbar-item"; Href "#home" ] [ str "Call for Papers" ]
+                    ]
+                ]
+            ]
+         ]
+
+let content page dispatch =
+    match page with
     | Home -> Home.home dispatch
-    | Cfp -> Cfp.view 
+    | Cfp -> Cfp.view
     | _ -> div [] [str "Nothing here."]
+
+
+let private view (model:Model) (dispatch:Dispatch<Msg>) =
+    div [] [
+        navBar
+        content model.page dispatch
+    ]
 
 open Elmish.React
 open Elmish.Debug

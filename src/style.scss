@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+$white: white;
+$sff_softred: #EF4036;
+$sff_red: #D92027;
+$sff_brown: #7E3227; // eye of the chicken
+$sff_gold: #FCB03A;
+$sff_beak: #F58020;
+$sff_darkbrown: #560c06;
+
+$primary: $sff_red;
+$link: $sff_gold;
+$warning: $sff_softred;
+$error: $sff_red;
+
+$success: $sff_beak;
+$info: $sff_beak;
+$dark: $sff_darkbrown;
+
+
+@import "~bulma/bulma";
+
+.chickenSandwich {
+    width: 75px;
+    height: 75px;
+}
+
+.topNav {
+    // background: $sff_red;
+    border-top: 5px solid purple;
+    border-bottom: 5px solid purple;
+    height: 150px;
+}
