@@ -25,8 +25,11 @@ $dark: $sff_darkbrown;
     height: 75px;
 }
 
+.headerButton {
+    margin: 5px;
+}
+
 .topNav {
-    // background: $sff_red;
     border-top: 5px solid purple;
     border-bottom: 5px solid purple;
     height: 150px;
