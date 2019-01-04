@@ -16,21 +16,31 @@ $error: $sff_red;
 $success: $sff_beak;
 $info: $sff_beak;
 $dark: $sff_darkbrown;
-
+$text: $sff_darkbrown;
+$navbar-item-hover-color: $white;
+$navbar-item-hover-background-color:saturate(darken($sff_red,10%),25%);
+$navbar-height: 7rem;
 
 @import "~bulma/bulma";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700');
 
-.chickenSandwich {
-    width: 75px;
-    height: 75px;
+.navbar-item{
+    color: $white;
+    font-size: 1.5rem;
 }
 
-.headerButton {
-    margin: 5px;
+.hero .title{
+  color: $dark;
+  font-family: 'Montserrat', sans-serif;
+  font-size:4rem;
+  font-weight:400;
 }
-
-.topNav {
-    border-top: 5px solid purple;
-    border-bottom: 5px solid purple;
-    height: 150px;
+.hero .subtitle{
+  color:$dark;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7rem;
+  font-weight: 100;
+}
+.hero p {
+  font-size: 1.7rem;
 }

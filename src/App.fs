@@ -33,28 +33,34 @@ let init loc =
 let update msg model =
   model, Cmd.Empty
 
-
+//uncomment the navbar items as we add content for the pages
 let navBar =
-  nav [ Class "navbar is-primary topNav"; Role "navigation" ] [
-    div [ Class "navbar-brand" ] [
-      img [Class "chickenSandwich"; Src "sandwich.png"]
-    ]
-    div [ Class "navbar-start"] []
-    div [ Class "navbar-menu" ] [
-      a [ Class "navbar-item"; Href "#home" ] [ str "Home" ]
-      a [ Class "navbar-item"; Href "#speakers" ] [ str "Speakers" ]
-      a [ Class "navbar-item"; Href "#venue" ] [ str "Venue" ]
-      a [ Class "navbar-item"; Href "#schedule" ] [ str "Schedule" ]
-      a [ Class "navbar-item"; Href "#tickets" ] [ str "Tickets" ]
-      a [ Class "navbar-item"; Href "#cfp" ] [ str "Call for Papers" ]
-    ]
-    div [Class "navbar-end"] [
-      a [Class "button headerButton"] [ 
-        i [ Class "fab fa-twitter"] [str " Share"]
+  Navbar.navbar [Navbar.Color IsPrimary; Navbar.Option.Props [Role "navigation"]] [ 
+    Navbar.Item.a  [ Navbar.Item.Props [Href "#home" ]] [ str "Home" ]
+    //Navbar.Item.a [ Navbar.Item.Props[Href "#speakers"]  ] [ str "Speakers" ]
+    //Navbar.Item.a [ Navbar.Item.Props[Href "#venue"]  ] [ str "Venue" ]
+    //Navbar.Item.a [ Navbar.Item.Props[Href "#schedule"]  ] [ str "Schedule" ]
+    //Navbar.Item.a [ Navbar.Item.Props[Href "#tickets"]  ] [ str "Tickets" ]
+    Navbar.Item.a [ Navbar.Item.Props[Href "https://sessionize.com/southern-fried-fsharp"]  ] [ str "Call for Speakers" ]
+    Navbar.End.div [] [
+      Navbar.Item.div [ ] [
+        Button.a [Button.Props [Href "#"]] [
+          i [ Class "fab fa-twitter"] [str " Share"]
+        ]
       ]
-      a [Class "button headerButton"] [ 
-        i [ Class "fab fa-github"] [str " Contribute"]
+      Navbar.Item.div [ ] [
+        Button.a [Button.Props [Href "https://github.com/TriangleFSharp/SFFConference"]] [
+          i [ Class "fab fa-github"] [str " Contribute"]
+        ]
       ]
+
+    ]
+  ]
+
+let placeholder = 
+  Hero.hero [Hero.Color IsInfo] [
+    Hero.body [] [
+      Heading.h2 [Heading.IsSubtitle ] [str "Updates coming soon"]
     ]
   ]
 
@@ -62,7 +68,7 @@ let content page dispatch =
   match page with
   | Home -> Home.home dispatch
   | Cfp -> Cfp.view
-  | _ -> div [] [str "Nothing here."]
+  | _ -> placeholder
 
 
 let private view (model:Model) (dispatch:Dispatch<Msg>) =

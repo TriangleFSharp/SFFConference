@@ -4,7 +4,7 @@ open Fable.Helpers.React.Props
 
 let view =
     div [ Class "main-container" ] [
-        form [ Action "http://formspree.io/your@email.com"; Method "POST"] [
+        form [ Action "http://formspree.io/contact@southernfriedfsharp.com"; Method "POST"] [
             input [Type "Text"; Name "name"; Placeholder "Name"]
             br []
             input [Type "Email"; Name "_replyto"; Placeholder "Email"]
