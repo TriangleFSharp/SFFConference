@@ -7,8 +7,8 @@ let home dispatch =
   Hero.hero [] [ 
     Hero.body [] [
       Columns.columns [Columns.IsCentered ] [ 
-        Column.column [Column.Width (Screen.All , Column.IsOneThird)]
-          [Image.image [  ] [img [ Src "sfflogo_large.png";]]]
+        Column.column [Column.Width (Screen.All , Column.IsOneQuarter)]
+          [Image.image [  ] [img [ Src "sfflogo_large2.png";]]]
       ]   
       Container.container [ Container.Modifiers [ Modifier.TextAlignment (Screen.All, TextAlignment.Centered) ] ] [ 
         Heading.h1 [ ]
