@@ -44,7 +44,7 @@ let navBar =
     Navbar.Item.a [ Navbar.Item.Props[Href "https://sessionize.com/southern-fried-fsharp"]  ] [ str "Call for Speakers" ]
     Navbar.End.div [] [
       Navbar.Item.div [ ] [
-        Button.a [Button.Props [Href "#"]] [
+        Button.a [ Button.Props [Href "https://twitter.com/friedfsharp"]] [
           i [ Class "fab fa-twitter"] [str " Share"]
         ]
       ]

@@ -43,7 +43,7 @@ Target.create "Watch" (fun _ ->
 )
 
 // Where to push generated documentation
-let githubLink = "https://github.com/TriangleFSharp/SFFConference.git"
+let githubLink = "git@github.com:TriangleFSharp/SFFConference.git"
 let publishBranch = "gh-pages"
 let fableRoot   = __SOURCE_DIRECTORY__
 let temp        = fableRoot </> "temp"
