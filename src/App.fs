@@ -40,7 +40,7 @@ let navBar =
     //Navbar.Item.a [ Navbar.Item.Props[Href "#speakers"]  ] [ str "Speakers" ]
     //Navbar.Item.a [ Navbar.Item.Props[Href "#venue"]  ] [ str "Venue" ]
     //Navbar.Item.a [ Navbar.Item.Props[Href "#schedule"]  ] [ str "Schedule" ]
-    //Navbar.Item.a [ Navbar.Item.Props[Href "#tickets"]  ] [ str "Tickets" ]
+    Navbar.Item.a [ Navbar.Item.Props[Href "https://www.eventbrite.com/e/southern-fried-f-tickets-54591291021"]  ] [ str "Tickets" ]
     Navbar.Item.a [ Navbar.Item.Props[Href "https://sessionize.com/southern-fried-fsharp"]  ] [ str "Call for Speakers" ]
     Navbar.End.div [] [
       Navbar.Item.div [ ] [
