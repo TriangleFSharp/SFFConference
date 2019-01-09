@@ -57,6 +57,24 @@ let navBar =
     ]
   ]
 
+let footer =
+  Footer.footer [] [
+    Level.level [] [
+      Level.item [] [
+        a [Href "http://foundation.fsharp.org/code_of_conduct"] [ str "Code of Conduct"]
+      ]
+      Level.item [] [
+        Image.image [ Image.Is32x32 ] [
+          img [Src "sandwich.png"]
+        ]
+      ]
+      Level.item [] [
+        str "Questions?"
+        a [Href "mailto:contact@southernfriedfsharp.com"] [ str " Contact us"]
+      ]
+    ]
+  ]
+
 let placeholder = 
   Hero.hero [Hero.Color IsInfo] [
     Hero.body [] [
@@ -76,6 +94,7 @@ let private view (model:Model) (dispatch:Dispatch<Msg>) =
   div [] [
     navBar
     content model.page dispatch
+    footer
   ]
 
 open Elmish.React
