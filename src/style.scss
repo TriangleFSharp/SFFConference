@@ -44,6 +44,10 @@ $navbar-height: 7rem;
 .hero p {
   font-size: 1.7rem;
 }
+h1,h2,h3,h4 {
+  color:$dark;
+  font-family: 'Montserrat', sans-serif;
+}
 
 .leaflet-container {
   width: 100%;
