@@ -44,8 +44,9 @@ $navbar-height: 7rem;
 .hero p {
   font-size: 1.7rem;
 }
-h1,h2,h3,h4 {
-  color:$dark;
+
+.title,.subtitle {
+  color:$text;
   font-family: 'Montserrat', sans-serif;
 }
 

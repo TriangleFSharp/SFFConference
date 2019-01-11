@@ -70,7 +70,9 @@ let footer =
       ]
       Level.item [] [
         str "Questions?"
-        a [Href "mailto:contact@southernfriedfsharp.com"] [ str " Contact us"]
+        a [ Href "mailto:contact@southernfriedfsharp.com"
+            Style [ Margin "5px" ] ] 
+            [ str "Contact us"]
       ]
     ]
   ]
