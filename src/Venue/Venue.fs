@@ -79,14 +79,16 @@ let view =
                 str " in downtown Raleigh North Carolina, just a few blocks from the Raleigh convention center."
               ]
             ]
-            Tile.parent [Tile.IsVertical] [
-              article [Class "tile is-child notification"] [
-                p [Class "title"] [ str "Food" ]
-                p [] [
-                  str "Stay for the chicken and waffles or, if that's not your style, there is a wide variety of choices within easy walking distance of the conference center."
-                ]
-              ]
-            ]
+            // Tile.parent [Tile.IsVertical] [
+            //   article [Class "tile is-child notification"] [
+            //     p [Class "title"] [ str "Food" ]
+            //     p [] [
+            //       // Dame's chicken and waffles
+            //       // Is this the right place to mention limited availability?
+            //       str "Stay for the chicken and waffles or, if that's not your style, there is a wide variety of choices within easy walking distance of the conference center."
+            //     ]
+            //   ]
+            // ]
             Tile.parent [Tile.IsVertical] [
               article [Class "tile is-child notification is-info"] [
                 p [Class "title"] [
