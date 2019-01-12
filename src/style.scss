@@ -58,3 +58,12 @@ $navbar-height: 7rem;
 .footer {
   background:whitesmoke;
 }
+
+.chicken-sandwich {
+  transition: all 500ms;
+  transform: translateY(0%) rotate(0deg)
+}
+.chicken-sandwich:hover {
+  transition: all 500ms;
+  transform: translateY(-20%) rotate(-15deg)
+}

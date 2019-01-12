@@ -65,7 +65,7 @@ let footer =
       ]
       Level.item [] [
         Image.image [ Image.Is32x32 ] [
-          img [Src "sandwich.png"]
+          img [Src "sandwich.png"; Class "chicken-sandwich"]
         ]
       ]
       Level.item [] [
