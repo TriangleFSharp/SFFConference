@@ -6766,5 +6766,17 @@ label.panel-block {
 .hero p {
   font-size: 1.7rem; }
 
+.title,
+.subtitle {
+  color: #560c06;
+  font-family: 'Montserrat', sans-serif; }
+
+.leaflet-container {
+  width: 100%;
+  height: 400px; }
+
+.footer {
+  background: whitesmoke; }
+
 
 /*# sourceMappingURL=style.css.map*/
