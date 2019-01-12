@@ -21,7 +21,7 @@ module Leaflet =
   | Attribution of string
   let tileLayer () =
     let props = [
-      Url "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+      Url "https://{s}.tile.osm.org/{z}/{x}/{y}.png"
       Attribution "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
     ]
     ofImport "TileLayer" "react-leaflet" (keyValueList CaseRules.LowerFirst props) []
