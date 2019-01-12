@@ -93,7 +93,7 @@ let view =
                   str "Accomodation"
                 ]
                 p [Class "subtitle"] [
-                  str "Here are several options within easy walking distance."
+                  str "There are several options within easy walking distance."
                 ]
                 p [] [
                   hotel 
