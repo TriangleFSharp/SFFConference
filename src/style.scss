@@ -67,3 +67,18 @@ $navbar-height: 7rem;
   transition: all 500ms;
   transform: translateY(-20%) rotate(-15deg)
 }
+
+///////////////////////
+.speaker-frame {
+  height: 200px;
+  width: 200px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.speaker-pic img {
+  transform: rotate(-45deg) translate(0px);
+}
+// .speaker-pic {
+// }
