@@ -70,15 +70,15 @@ $navbar-height: 7rem;
 
 ///////////////////////
 .speaker-frame {
+  margin: 50px;
   height: 200px;
   width: 200px;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
   overflow: hidden;
   margin-top: 50px;
-  margin-bottom: 50px;
 }
-.speaker-pic img {
-  transform: rotate(-45deg) translate(0px);
+.speaker-pic {
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg) translate(-80px);
 }
-// .speaker-pic {
-// }
