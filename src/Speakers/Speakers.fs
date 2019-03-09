@@ -3,7 +3,7 @@ module Speakers
 open Fable.Helpers.React
 open Fable.Helpers.React.Props
 
-let speakerLeft name pic talkTitle talkSummary right =
+let speaker right name pic talkTitle talkSummary =
   article [Class "media"] [
     if right = false then 
       yield figure [Class "media-left"] [
@@ -42,6 +42,9 @@ let speakerLeft name pic talkTitle talkSummary right =
       ]
   ]
 
+let speakerLeft = speaker false
+let speakerRight = speaker true
+
 let foremFipsum = "Fexplicabo faborum flaceat frchitecto ft felectus.  fmet folestiae finus ft fn fum fuo facilis fst.  fuas fuasi fossimus fit.  fa foloremque fatus folores fd funt fuidem ficta.  fos fst fsperiores fssumenda faudantium foluptas foluptatem f#"
 
 let view =
@@ -52,18 +55,15 @@ let view =
         "http://placekitten.com/300/301" 
         "Screwing Around with F#"
         foremFipsum
-        false
-      speakerLeft 
+      speakerRight 
         "Scratchy"
         "http://placekitten.com/301/300" 
         "Maybe... you need a type system"
         foremFipsum
-        true
       speakerLeft 
         "Monad"
         "http://placekitten.com/300/300" 
         "F# because it's NOT javascript"
         foremFipsum
-        false
     ]
   ]
