@@ -6786,5 +6786,17 @@ label.panel-block {
   transition: all 500ms;
   transform: translateY(-20%) rotate(-15deg); }
 
+.speaker-frame {
+  margin-right: 2em;
+  height: 150px;
+  width: 150px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  border: 5px solid black;
+  background-color: #0a7fdf; }
+
+.speaker-pic {
+  transform: rotate(-45deg) scale(1.3); }
+
 
 /*# sourceMappingURL=style.css.map*/
