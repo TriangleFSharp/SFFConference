@@ -85,7 +85,7 @@ let speakersList = [
     {
     name = "Olya Samusik"
     icon = "olya_samusik.jpg"
-    talkTitle = "Solving 3d World Problems With F#"
+    talkTitle = "Solving 3D Problems With F#"
     talkSummary = "In this talk, I will do an overview of various challenges awaiting those who enter the world of three-dimensional graphics programming, focusing on how F# combined with the existing tools for desktop, web and native mobile can help to tackle these challenges. "
   };
   {
