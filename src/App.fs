@@ -33,6 +33,31 @@ let init loc =
 let update msg model =
   model, Cmd.Empty
 
+let paypal = 
+  form [ Action "https://www.paypal.com/cgi-bin/webscr"
+         Method "post"
+         Target "_top" ]
+      [ input [ Type "hidden"
+                Name "cmd"
+                Value "_donations" ]
+        input [ Type "hidden"
+                Name "business"
+                Value "8D2V3G4AEGENJ" ]
+        input [ Type "hidden"
+                Name "currency_code"
+                Value "USD" ]
+        input [ Type "image"
+                Src "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                HTMLAttr.Custom ("border", "0")
+                Name "submit"
+                Title "PayPal - The safer, easier way to pay online!"
+                Alt "Donate with PayPal button" ]
+        img [ Alt ""
+              HTMLAttr.Custom ("border", "0")
+              Src "https://www.paypal.com/en_US/i/scr/pixel.gif"
+              HTMLAttr.Custom ("width", "1")
+              HTMLAttr.Custom ("height", "1") ] ]
+
 //uncomment the navbar items as we add content for the pages
 let navBar =
   Navbar.navbar [Navbar.Color IsPrimary; Navbar.Option.Props [Role "navigation"]] [ 
@@ -51,6 +76,9 @@ let navBar =
         Button.a [Button.Props [Href "https://github.com/TriangleFSharp/SFFConference"]] [
           i [ Class "fab fa-github"] [str " Contribute"]
         ]
+      ]
+      Navbar.Item.div [ ] [
+        paypal
       ]
 
     ]
