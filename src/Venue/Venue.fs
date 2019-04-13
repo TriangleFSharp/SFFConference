@@ -50,6 +50,10 @@ let venue =
       str " is being held at " 
       a [ Href "https://www.redhat.com/en/about/videos/inside-red-hats-raleigh-headquarters"] [str "Red Hat global headquarters"]
       str " in downtown Raleigh North Carolina, just a few blocks from the Raleigh convention center."
+      hr []
+      span [Style [FontWeight "bold"]] [
+        str "We are in the annex.  Right down the street from the main enterence.  Looking at the main enterance, turn left.and before u grt to the corner, the enterence is on the right"
+      ]
     ]
   ]
 let food = 
